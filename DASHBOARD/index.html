@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #a3d5f3;
+            color: #333;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            background-color: #fff;
+        }
+        
+        .hamburger-menu {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .daily-summary {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        
+        .progress-bar {
+            text-align: center;
+        }
+        
+        .circle-progress {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 5px solid #7fd674;
+            margin: 10px auto;
+            position: relative;
+            line-height: 100px;
+            font-size: 18px;
+        }
+        
+        .quick-log-btn {
+            background-color: #f9a826;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        .quick-log-btn:hover {
+            background-color: #f88c1e;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        
+        .navigation-buttons button {
+            background-color: #7fd674;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        .navigation-buttons button:hover {
+            background-color: #69b65e;
+        }
+        
+        .health-tracker {
+            display: none;
+            background-color: #fff;
+            padding: 20px;
+        }
+        
+        .data-input label {
+            display: block;
+            margin: 10px 0;
+        }
+        
+        .data-input input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        .save-btn {
+            background-color: #f9a826;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+        }
+        
+        .save-btn:hover {
+            background-color: #f88c1e;
+        }
+        
+        .progress-visualization {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Home/Dashboard Screen -->
+    <div class="dashboard">
+        <header>
+            <div class="logo">Health App</div>
+            <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
+        </header>
+
+        <div class="daily-summary">
+            <div class="progress-bar">
+                <label>Water Intake</label>
+                <div class="circle-progress" id="waterProgress"></div>
+                <button class="quick-log-btn" onclick="logWater()">Log Water</button>
+            </div>
+            <div class="progress-bar">
+                <label>Sleep</label>
+                <div class="circle-progress" id="sleepProgress"></div>
+                <button class="quick-log-btn" onclick="logSleep()">Log Sleep</button>
+            </div>
+            <div class="progress-bar">
+                <label>Exercise</label>
+                <div class="circle-progress" id="exerciseProgress"></div>
+                <button class="quick-log-btn" onclick="logExercise()">Log Exercise</button>
+            </div>
+        </div>
+
+        <div class="navigation-buttons">
+            <button onclick="navigate('health')">Health Tracker</button>
+            <button onclick="navigate('food')">Food Tracker</button>
+            <button onclick="navigate('workout')">Workout Bucket</button>
+        </div>
+    </div>
+
+    <!-- Health Tracker Page (Example) -->
+    <div class="health-tracker" id="healthTrackerPage">
+        <header>
+            <button class="back-btn" onclick="navigate('home')">Back</button>
+            <h1>Health Tracker</h1>
+        </header>
+        <div class="data-input">
+            <label>Water Intake:</label>
+            <input type="number" id="waterInput" placeholder="Enter water intake (ml)">
+            
+            <label>Sleep Duration:</label>
+            <input type="time" id="sleepInput">
+            
+            <label>Exercise Duration:</label>
+            <input type="number" id="exerciseInput" placeholder="Enter minutes of exercise">
+            
+            <button class="save-btn" onclick="saveData()">Save</button>
+        </div>
+
+        <div class="progress-visualization">
+            <h3>Today's Progress:</h3>
+            <div id="waterProgressBar">Water: 0%</div>
+            <div id="sleepProgressBar">Sleep: 0%</div>
+            <div id="exerciseProgressBar">Exercise: 0%</div>
+        </div>
+    </div>
+
+    <script>
+        // Initial progress data
+let waterProgress = 0;
+let sleepProgress = 0;
+let exerciseProgress = 0;
+
+// Functions for navigating between pages
+function navigate(page) {
+    if (page === 'home') {
+        document.querySelector('.dashboard').style.display = 'block';
+        document.querySelector('#healthTrackerPage').style.display = 'none';
+    } else if (page === 'health') {
+        document.querySelector('.dashboard').style.display = 'none';
+        document.querySelector('#healthTrackerPage').style.display = 'block';
+    }
+}
+
+// Functions for quick logging
+function logWater() {
+    waterProgress += 10;
+    updateProgress();
+}
+
+function logSleep() {
+    sleepProgress += 2;
+    updateProgress();
+}
+
+function logExercise() {
+    exerciseProgress += 15;
+    updateProgress();
+}
+
+// Update progress circles
+function updateProgress() {
+    document.getElementById('waterProgress').innerText = waterProgress + '%';
+    document.getElementById('sleepProgress').innerText = sleepProgress + '%';
+    document.getElementById('exerciseProgress').innerText = exerciseProgress + '%';
+
+    // Update progress bars
+    document.getElementById('waterProgressBar').innerText = 'Water: ' + waterProgress + '%';
+    document.getElementById('sleepProgressBar').innerText = 'Sleep: ' + sleepProgress + '%';
+    document.getElementById('exerciseProgressBar').innerText = 'Exercise: ' + exerciseProgress + '%';
+}
+
+// Save data from Health Tracker
+function saveData() {
+    const waterInput = document.getElementById('waterInput').value;
+    const sleepInput = document.getElementById('sleepInput').value;
+    const exerciseInput = document.getElementById('exerciseInput').value;
+
+    // Store data in localStorage
+    localStorage.setItem('water', waterInput);
+    localStorage.setItem('sleep', sleepInput);
+    localStorage.setItem('exercise', exerciseInput);
+
+    alert('Data saved successfully!');
+}
+    </script>
+</body>
+</html>
