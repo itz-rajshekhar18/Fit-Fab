@@ -4,7 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Browse Workouts</title>
+  <style>
+    .timer {
+      font-size: 2em;
+      text-align: center;
+      margin: 20px;
+    }
+    .button-container {
+      text-align: center;
+      margin: 20px;
+    }
+    .timer-btn {
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+  </style>
   <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
   <div class="container">
@@ -52,16 +69,13 @@
       </div>
     </section>
 
-    <!-- Start Button -->
-    <div class="start">
-      <button class="start-btn">Start</button>
-    </div>
-
-    <!-- Timer -->
     <div class="timer">
       <p class="timer-display">00:00:00</p>
     </div>
 
+    <div class="button-container">
+      <button class="timer-btn" id="timer-btn">Start</button>
+    </div>
     <!-- Bottom Navigation -->
     <footer class="bottom-nav">
       <button class="nav-item">Home</button>
@@ -70,5 +84,7 @@
       <button class="nav-item">Profile</button>
     </footer>
   </div>
+  <script src="time.js"></script>
 </body>
+
 </html>
