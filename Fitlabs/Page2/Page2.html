@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="health-tracker">
+        <header>
+            <button class="back-button">←</button>
+            <h1>Health Tracker</h1>
+        </header>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <label for="water-intake">Water Intake (ml)</label>
+                <div class="input-box">
+                    <input type="number" id="water-intake" placeholder="0">
+                    
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="sleep-duration">Sleep Duration</label>
+                <div class="input-box">
+                    <input type="time" id="sleep-duration" placeholder="00:00">
+                    <button class="check-button">✔</button>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="exercise-duration">Exercise Duration (minutes)</label>
+                <div class="input-box">
+                    <input type="number" id="exercise-duration" placeholder="00">
+                    <button class="check-button">✔</button>
+                </div>
+            </div>
+            
+            <button class="save-button">Save</button>
+        </div>
+        
+        <div class="progress-section">
+            <div class="progress-bar">
+                <p>Steps</p>
+                <div class="bar-container">
+                    <div class="bar steps-bar" style="width: 50%;"></div>
+                </div>
+                <span>50% of your daily goal</span>
+            </div>
+            
+            <div class="progress-bar">
+                <p>Exercise</p>
+                <div class="bar-container">
+                    <div class="bar exercise-bar" style="width: 70%;"></div>
+                </div>
+                <span>70% of your daily goal</span>
+            </div>
+            
+            <div class="progress-bar">
+                <p>Water</p>
+                <div class="bar-container">
+                    <div class="bar water-bar" style="width: 40%;"></div>
+                </div>
+                <span>40% of your daily goal</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

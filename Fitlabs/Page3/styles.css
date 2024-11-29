@@ -1,0 +1,155 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfaf6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+}
+
+/* Nutrition Section */
+.nutrition {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.nutrition h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nutrition p {
+    font-size: 14px;
+    color: #555;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.search-bar {
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #fdfaf6;
+}
+
+.category-section {
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.category-section h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.category {
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.category p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.popular-section {
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.popular-section h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.popular-foods {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popular-foods li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.popular-foods li span {
+    font-weight: bold;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+.bottom-nav button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
