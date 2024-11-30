@@ -1,0 +1,190 @@
+/* Root variables for easy customization */
+:root {
+    --background-light: #b3e5fc;
+    --background-white: #fff;
+    --text-dark: #000;
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    --border-radius: 30px;
+    --max-width: 400px;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    min-height: 100vh; /* Allow body to stretch beyond viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align the content to the top */
+    position: relative;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Outer Container for Centering */
+.outer-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+/* Inner Container for Content */
+.inner-container {
+    width: 100%;
+    max-width: var(--max-width);
+    background-color: var(--background-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+.header {
+    width: 100%;
+    background-color: var(--background-white);
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: var(--box-shadow);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    word-wrap: break-word; /* Handle long text gracefully */
+}
+
+.title {
+    font-size: 24px;
+    margin: 0;
+    color: #FF6347; /* Tomato color */
+}
+
+/* Search Bar */
+.search-bar {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-bar input {
+    width: 80%;
+    max-width: 300px;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: #fdfaf6;
+}
+
+/* Category Section */
+.category-section {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.category-section h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.category {
+    text-align: center;
+    background-color: var(--background-white);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.category img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.category p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Popular Foods Section */
+.popular-section {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.popular-section h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.popular-foods {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popular-foods li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.popular-foods li span {
+    font-weight: bold;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: var(--background-white);
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--text-dark);
+    transition: color 0.3s;
+}
+
+.bottom-nav a:hover {
+    color: #FF6347; /* Tomato color on hover */
+}
+
+.bottom-nav img {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 5px;
+}

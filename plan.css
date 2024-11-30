@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1rem;
+}
+
+.categories span {
+    color: #aaa;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.categories .active {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+/* Workout List */
+.workouts {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.workout {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #1c1c1c;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.workout img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.details h2 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.details p {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Footer Section */
+.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #1c1c1c;
+    border-top: 1px solid #333;
+}
+
+.footer .nav-item {
+    text-align: center;
+    flex: 1;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.footer .nav-item.active {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 1.2rem;
+    }
+
+    .categories {
+        font-size: 0.9rem;
+        gap: 10px;
+    }
+
+    .workout {
+        padding: 8px;
+    }
+
+    .workout img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .details h2 {
+        font-size: 0.9rem;
+    }
+
+    .details p {
+        font-size: 0.8rem;
+    }
+
+    .footer .nav-item {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .workout {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .workout img {
+        margin-bottom: 10px;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .footer .nav-item {
+        width: 50%; /* Two items per row */
+        padding: 10px 0;
+    }
+}

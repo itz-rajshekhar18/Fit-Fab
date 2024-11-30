@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #89d9df;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            height: 500px; /* Increased height */
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Ensures arrow and title are spaced */
+            margin-bottom: 20px;
+        }
+        .back-arrow {
+            font-size: 18px;
+            text-decoration: none;
+            color: #333;
+        }
+        .header h1 {
+            font-size: 18px;
+            margin: 0 auto; /* Centers the title horizontally */
+            text-align: center;
+            flex-grow: 1; /* Pushes title to occupy the middle space */
+        }
+        .tracker-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px 0;
+        }
+        .tracker-item .label {
+            color: #555;
+        }
+        .tracker-item .value {
+            font-weight: bold;
+        }
+        .tracker-item .label .target {
+            font-size: 12px;
+            color: #e27e8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="nutritionalTracker.html" class="back-arrow">&#x2190;</a>
+            <h1>Food Tracker</h1>
+        </div>
+        <div class="tracker-item">
+            <div class="label">
+                Total Calories <span class="target">35 - 45 Kcal</span>
+            </div>
+            <div class="value">0</div>
+        </div>
+        <div class="tracker-item">
+            <div class="label">
+                Carbs <span class="target">0g</span>
+            </div>
+            <div class="value">0</div>
+        </div>
+        <div class="tracker-item">
+            <div class="label">
+                Fat <span class="target">1 - 2 g</span>
+            </div>
+            <div class="value">0</div>
+        </div>
+        <div class="tracker-item">
+            <div class="label">
+                Protein <span class="target">6 - 7g</span>
+            </div>
+            <div class="value">0</div>
+        </div>
+        <div class="tracker-item">
+            <div class="label">
+                Sugar <span class="target">0g</span>
+            </div>
+            <div class="value">0</div>
+        </div>
+    </div>
+</body>
+</html>
