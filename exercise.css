@@ -1,0 +1,91 @@
+    /* General Styling */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #121212;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .container {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        margin-top: 20px;
+      }
+
+      .btn-link {
+        background: none;
+        border: none;
+        font-size: 1.5em;
+        cursor: pointer;
+        color: #333;
+        text-decoration: none;
+      }    
+  
+      .title {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+  
+      .workout-card {
+        background-color: #1e1e1e;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+  
+      .workout-card img {
+        width: 100%;
+        height: auto;
+      }
+  
+      .workout-info {
+        padding: 15px;
+      }
+  
+      .workout-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+  
+      .workout-details {
+        font-size: 0.9rem;
+        color: #b0b0b0;
+      }
+  
+      /* Timer Button Styling */
+      .timer-button {
+        display: block;
+        width: 100%;
+        background-color: #007bff;
+        color: #ffffff;
+        font-size: 1rem;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        margin-top: 10px;
+        transition: background-color 0.3s ease;
+      }
+  
+      .timer-button:hover {
+        background-color: #0056b3;
+      }
+  
+      .timer-button.stop {
+        background-color: #ff4757;
+      }
+  
+      .timer-display {
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 20px 0;
+      }
