@@ -1,0 +1,130 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #b3e5fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.health-tracker {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 1.2em;
+    color: #333;
+    flex: 1;
+    text-align: center;
+}
+
+/* Input Section */
+.input-section {
+    margin-bottom: 20px;
+}
+
+.mb-3 {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-control, .form-select {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.save-button {
+    width: 100%;
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* Progress Section */
+.progress-section {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    margin-bottom: 15px;
+}
+
+.progress-bar p {
+    font-size: 0.9em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.bar-container {
+    background: #eee;
+    height: 6px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bar {
+    height: 100%;
+    background: #333;
+}
+
+.steps-bar {
+    background: #28a745;
+}
+
+.exercise-bar {
+    background: #28a745;
+}
+
+.water-bar {
+    background: #28a745;
+}
+
+.progress-bar span {
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 5px;
+    display: block;
+    text-align: right;
+}
